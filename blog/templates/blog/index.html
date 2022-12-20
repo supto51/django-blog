@@ -2,7 +2,54 @@
 
 {% block title %} Home {% endblock %}
 
+{% load static %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
 
 {% block content %}
-  <h1>Oh, Hello there!</h1>
+
+  <header id="main-navigation">
+    <h1><a href="#">Supto Blog</a></h1>
+    <nav>
+      <a href="">Posts</a>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <div>
+      <img src="" alt="my image">
+      <h1>SUPTO BLOG</h1>
+    </div>
+
+    <p>Hi, I am Supto. I liked to write about the wonderful universe of Programming</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>My latest thoughts</h2>
+
+    <ul>
+      <li>
+        <article class="post">
+          <a href="">
+            <img src="" alt="mountain">
+            <div class="post__content">
+              <h3>Mountain Hiking</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo ratione cum numquam consequuntur sapiente sequi laborum molestias dolor libero.</p>
+            </div>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+
+  <section id="about">
+    <h2>What i do?</h2>
+    <p>
+      I love programming. I love to solved complex problems. I like to explore the world of programming
+    </p>
+  </section>
+
 {% endblock %}
