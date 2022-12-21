@@ -1,15 +1,17 @@
-{% load static %}
-{% block css_files %}
-  <link rel="stylesheet" href="{% static 'blog/css/post.css' %}">
+{% load static %} {% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/css/post.css' %}" />
 {% endblock %}
 
 <li>
   <article class="post">
-    <a href="">
-      <img src="{% static 'blog/img/mountains.jpg' %}" alt="mountain">
+    <a href="{% url 'post-details-page' slug=post.slug   %}">
+      <img
+        src="{% static 'blog/img/'|add:post.image %}"
+        alt="{{ post.title }}"
+      />
       <div class="post__content">
-        <h3>Mountain Hiking</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo ratione cum numquam consequuntur sapiente sequi laborum molestias dolor libero.</p>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
       </div>
     </a>
   </article>
