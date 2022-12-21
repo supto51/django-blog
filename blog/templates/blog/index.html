@@ -9,17 +9,9 @@
 
 
 {% block content %}
-
-  <header id="main-navigation">
-    <h1><a href="#">Supto Blog</a></h1>
-    <nav>
-      <a href="">Posts</a>
-    </nav>
-  </header>
-
   <section id="welcome">
     <div>
-      <img src="" alt="my image">
+      <img src="{% static 'blog/img/Supto.jpg' %}" alt="my image">
       <h1>SUPTO BLOG</h1>
     </div>
 
@@ -30,17 +22,9 @@
     <h2>My latest thoughts</h2>
 
     <ul>
-      <li>
-        <article class="post">
-          <a href="">
-            <img src="" alt="mountain">
-            <div class="post__content">
-              <h3>Mountain Hiking</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo ratione cum numquam consequuntur sapiente sequi laborum molestias dolor libero.</p>
-            </div>
-          </a>
-        </article>
-      </li>
+      {% include 'blog/include/post.html' %}
+      {% include 'blog/include/post.html' %}
+      {% include 'blog/include/post.html' %}
     </ul>
   </section>
 
