@@ -51,6 +51,18 @@ body {
   font-weight: bold;
 }
 
+#summary a {
+  color: white;
+  text-decoration: none;
+}
+
+#summary span {
+  background: white;
+  color: #390281;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+
 main {
   width: 90%;
   max-width: 90rem;

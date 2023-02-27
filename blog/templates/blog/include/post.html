@@ -6,7 +6,7 @@
   <article class="post">
     <a href="{% url 'post-details-page' slug=post.slug   %}">
       <img
-        src="{% static 'blog/img/'|add:post.image %}"
+        src="{% static 'blog/img/'|add:post.image_name %}"
         alt="{{ post.title }}"
       />
       <div class="post__content">
