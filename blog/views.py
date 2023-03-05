@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
+
 from .models import Post
 
 
 def get_date(post):
     return post['date']
+
 
 # Create your views here.
 
